@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+:root{
+    --color-blue: #18699f;
+    --color-blue2: #43aeb6;
+    --color-blue3: #052124;
+    --color-blue4: #040235;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blue);
+    font-size: 1.6rem;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+.container .texto{
+    text-align: justify;
+    padding: 0 1rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem;
+}
+
+.container .texto h1, h2{
+    margin: 2.5rem 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.texto .ind-clas h2{
+    margin: 1rem 0 1rem 0;
+    font-size: 1.8rem;
+}
+
+.container .texto .ind-clas{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.container .texto .ind-clas p{
+    margin: 0.8rem 0;
+}
+
+.container-pai{
+    width: 70%;
+    height: 55rem;
+    background-color: var(--color-blue2);
+    border-radius: 2rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #2217949f;
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+}
+
+
+.container-pai .form{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form #mensagem {
+    padding: 0.5rem;
+}
+
+.container-pai .form h2{
+    margin: 1rem 0 0 0;
+}
+
+.form .input-label{
+    margin: 1.5rem 0;
+    color: var(--color-blue3);
+}
+
+.form .input-label label{
+    width: 6rem;
+    display: inline-block;
+}
+
+.form button{
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    background-color: var(--color-blue3);
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.3rem #000;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.input-label input{
+    width: 40rem;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--color-blue);
+    font-size: 1.6rem;
+}
+
+.input-label input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+button:active{
+    background-color: var(--color-blue4);
+}
+
+.input-label input:focus {
+    outline: 1px solid var(--color-blue3);
+}
