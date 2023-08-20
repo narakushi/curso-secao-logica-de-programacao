@@ -29,7 +29,7 @@ function getWeekDayText(diaSemana) {
     }
 }
 
-const data = new Date('1987-04-21 00:00:00.1000');
+const data = new Date('1987-04-20 00:00:00.1000');
 let diaSemana = data.getDay();
 
 diaSemanaTexto = getWeekDayText(diaSemana)
