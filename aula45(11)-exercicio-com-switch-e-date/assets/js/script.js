@@ -1,76 +1,16 @@
 function verificaDia(diaSemana) {
     let diaSemanaTexto;
 
-    switch (diaSemana) {
-        case 0:
-            diaSemanaTexto = 'Domingo';
-            return diaSemanaTexto;
-        case 1:
-            diaSemanaTexto = 'segunda-feira';
-            return diaSemanaTexto;
-        case 2:
-            diaSemanaTexto = 'terça-feira';
-            return diaSemanaTexto;
-        case 3:
-            diaSemanaTexto = 'quarta-feira';
-            return diaSemanaTexto;
-        case 4:
-            diaSemanaTexto = 'quinta-feira';
-            return diaSemanaTexto;
-        case 5:
-            diaSemanaTexto = 'sexta-feira';
-            return diaSemanaTexto;
-        case 6:
-            diaSemanaTexto = 'Sábado';
-            return diaSemanaTexto;
-        default:
-            diaSemanaTexto = '';
-    }
+    const dias = ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo'];
+
+    return dias[diaSemana];
 }
 
 function verificaMes(mesNumero) {
     let mesNome;
+    const meses = ['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
-    switch (mesNumero) {
-        case 0:
-            mesNome = 'janeiro';
-            return mesNome;
-        case 1:
-            mesNome = 'fevereiro';
-            return mesNome;
-        case 2:
-            mesNome = 'março';
-            return mesNome;
-        case 3:
-            mesNome = 'abril';
-            return mesNome;
-        case 4:
-            mesNome = 'maio';
-            return mesNome;
-        case 5:
-            mesNome = 'junho';
-            return mesNome;
-        case 6:
-            mesNome = 'julho';
-            return mesNome;
-        case 7:
-            mesNome = 'agosto';
-            return mesNome;
-        case 8:
-            mesNome = 'setembro';
-            return mesNome;
-        case 9:
-            mesNome = 'outubro';
-            return mesNome;
-        case 10:
-            mesNome = 'novembro';
-            return mesNome;
-        case 11:
-            mesNome = 'dezembro';
-            return mesNome;
-        default:
-            mesNome = '';
-    }
+    return meses[mesNumero];
 }
 
 function addZero(num){
