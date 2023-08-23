@@ -1,5 +1,13 @@
-const frutas = ['Pera', 'Maçã', 'Uva'];
+const pessoa = {
+    nome: 'Taina',
+    sobrenome: 'Jilnin',
+    idade: 23
+};
 
-for(let i in frutas){
-    console.log(frutas[i]);
+//formas de acessar um objeto
+
+//console.log(pessoa['nome']);
+
+for(let chave in pessoa){
+    console.log(chave, pessoa[chave]);
 }
