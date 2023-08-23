@@ -8,15 +8,19 @@ const elementos = [
 function insereElementos() {
     const pai = document.querySelector('.form');
     let tempElement;
+    const div = document.createElement('div');
 
     for (let i = 0; i < elementos.length; i++) {
         const {tag, frase} = elementos[i];
         tempElement = document.createElement(tag);
-        tempElement.innerHTML = frase;
+        tempElement.innerText = frase;
         tempElement.style.fontSize = '2.2rem';
-        pai.appendChild(tempElement);
+        div.appendChild(tempElement);
     };
+
+    pai.appendChild(div);
 }
+
 
 //segunda forma de fazer
 
