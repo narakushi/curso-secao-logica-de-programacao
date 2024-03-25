@@ -7,4 +7,5 @@ console.log(estiloBg);
 
 for (let p of ps) {
     p.style.background = estiloBg;
+    p.style.color = '#000';
 }
