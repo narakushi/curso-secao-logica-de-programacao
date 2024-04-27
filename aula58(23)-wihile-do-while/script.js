@@ -1,14 +1,21 @@
-function random(min, max){
+function random(min, max) {
     const r = Math.random() * (max - min) + min;
     return Math.floor(r);
 }
 
-let rand = random(1, 51);
 
+const min = 1;
+const max = 11;
+let rand = 10;
 
-
-while((rand != 50)){
-    rand = random(1, 51);
+while(rand !== 10) {
+   
+    console.log(rand);
 }
 
-console.log(rand);
+console.log("**********");
+
+do{
+    
+    console.log(rand);
+}while(rand !== 10);
