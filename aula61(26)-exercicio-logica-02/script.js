@@ -3,9 +3,9 @@
  * retorne true se a imagem estiver no modo
  * paisagem */
 
-const ePaisagem = (width, height) => (width > height ? true : false);
+const ePaisagem = (width, height) => (width > height);
 
-if (ePaisagem(25, 90)) {
+if (ePaisagem(250, 90)) {
   console.log("Imagem está em modo paisagem");
 } else {
   console.log("A imagem não está em modo paisagem");
