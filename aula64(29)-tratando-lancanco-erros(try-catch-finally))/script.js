@@ -1,20 +1,27 @@
-try{
-    //executada quando não há erros
-    console.log('abri um arquivo');
-    console.log('Manipulei o arquivo e gerou erro'); //se der erro aquii, cai para o tratamento de erros, tipo s quando se abre um arquiivo mas n se fecha ele
-    console.log('Fechei o arquivo');
+function retornaHora(data) {
+  if (data && !(data instanceof Date)) {
+    throw new TypeError("esperando intância de Date.");
+  }
 
-    try{
-        console.log(b);
-    }catch(e){
-        console.log('deu erro')
-    } finally {
-        console.log('Tambem sou finally');
-    }
-} catch(e){
-    // É execuada quando há erros
-    console.log('Tratando o erro');
+  if (!data) {
+    data = new Date();
+  }
+
+  return data.toLocaleTimeString("pt-BR", {
+    hour: "2-digit", //para retornar com 2 digitos
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+}
+
+try {
+  const data = new Date("01-01-1970 12:58:12");
+  const hora = retornaHora();
+  console.log(hora);
+} catch (e) {
+    //tratar erro
+  //console.log(e);
 } finally {
-    // Sempre executado
-    console.log('FINALLY: eu sempre sou executado');
+  console.log("Tenha um bom dia");
 }
