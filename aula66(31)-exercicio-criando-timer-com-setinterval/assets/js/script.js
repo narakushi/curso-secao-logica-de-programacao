@@ -7,13 +7,15 @@ let seg = 0;
 let min = 0;
 let hour = 0;
 
+let inicio;
 
 const verifyTime = (time) => {
     return time < 10 ? "0" + time : time;
 };
 
 iniciar.addEventListener("click", function (event) {
-    setInterval(() => {
+    inicio = setInterval(() => {
+        timer.style.color = "#fff"
         if (seg < 59) {
             seg++;
             timer.innerHTML = `${verifyTime(hour)}:${verifyTime(min)}:${verifyTime(
@@ -27,7 +29,7 @@ iniciar.addEventListener("click", function (event) {
                 seg
             )}`;
         }
-        else if(min === 59){
+        else if (min === 59) {
             seg = 0;
             min = 0;
             hour++;
@@ -38,9 +40,15 @@ iniciar.addEventListener("click", function (event) {
 });
 
 pausar.addEventListener("click", function (event) {
-    
+    clearInterval(inicio);
+    timer.style.color = "#f00";
 });
 
 zerar.addEventListener("click", function (event) {
-    alert("zerar clicado");
+    timer.style.color = "#fff"
+    clearInterval(inicio);
+    seg = 0;
+    min = 0;
+    hour = 0;
+    timer.innerHTML = "00:00:00";
 });

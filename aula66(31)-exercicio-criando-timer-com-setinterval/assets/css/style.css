@@ -56,3 +56,7 @@ html {
 .actions button {
     padding: 0 0.4rem;
 }
+
+.pausado {
+    color: red;
+}
