@@ -1,18 +1,34 @@
 const pessoa = {
-    nome: 'João',
-    idade: 30, 
-    endereco:{
-        rua: 'Dadinho',
-        numero: 12
+    nome: 'Tania',
+    sobrenome: 'Karlin',
+    idade: '32',
+    endereco: {
+        rua: 'Av. Brasil',
+        numero: 123
     }
 };
 
-const { idade } = pessoa; //desestruturando por meio da atribuição
 
-console.log(idade);
+// atribuição via desestruturação
+//const { nome = '', sobrenome } = pessoa;
 
-const {nome='flavio', endereco:{rua:r, numero}} = pessoa;
+//console.log(nome, sobrenome);
 
-console.log(nome, r, numero);
+/*
+// renomeando a variável extraída
+const { nome: n, sobrenome } = pessoa;
 
+console.log(n, sobrenome);
 
+// desestruturando objeto de dentro de outro objeto
+
+const {endereco: {rua: r=504, numero}, endereco} = pessoa;
+
+console.log(r, numero, endereco)
+*/
+
+// pegando o resto do objeto
+
+const { nome, sobrenome, ...resto} = pessoa;
+
+console.log(nome, resto);
