@@ -1,24 +1,32 @@
-// let a = 'A';
-// let b = 'B';
-// let c = 'C';
+// atribuição via desestruturação
+/*
+let a = 'A';//B
+let b = 'B';//C
+let c = 'C';//A
 
+const letras = [b, c, a];
 
-// [a, b, c] = [1, 2, 3];
+[a, b, c] = letras; // como as variáveis já existem, elas estão recebendo
+// uma reatribuição
 
-// const numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+console.log(a, b, c);*/
+/*
+const numeros = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000];
+const [um, , tres, , cinco, , sete] = numeros;
 
-// const [primeiro, segundo, ...resto] = numeros; //pegando o primeiro e segundo valor, dps o resto
+console.log(um, tres, cinco);*/
+//                    0          1          2
+//                 0  1  2    0  1  2    0  1  2
+const numeros = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-// console.log(primeiro, segundo, resto)
+//primeira forma de acessar numeros
+// console.log(numeros[1][2])
 
-                              
-const numbers = [[1, 2, 3], [4, 5, 6]];
+// segunda forma
+// const [, [, , seis]] = numeros;
+//console.log(seis);
 
-const [lista1, lista2] = numbers;
+// terceira forma
 
-console.log(lista1, lista2);
-
-//acesso
-//pegando o primeiro elemento do segundo array 
-console.log(numbers[1][0]);
-
+const [lista1, lista2, lista3] = numeros;
+console.log(lista2[2])
