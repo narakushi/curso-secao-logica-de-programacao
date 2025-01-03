@@ -1,28 +1,41 @@
+/*const nome = ['Ana', 'Luana', 'Kaique'];
+
+
+//Maneiras de iterar sobre um array com for's
+
+
+/*for (let i = 0; i < nome.length; i++) {
+    console.log(nome[i]);
+}*/
+
+/*
+for (let i in nome) {
+    console.log(nome[i]);
+}*/
+
+/*
+for(let valor of nome) {
+    console.log(valor);
+}
+
+// uso do ForEach
+
+nome.forEach(function(valor, indice, array) {
+    console.log(valor, indice, array);
+})
+*/
+
+/** Então
+ * For clássico - Geralmente com iteráveis (array ou strings)
+ * For in - Retorna o índice ou chave (string, array ou objetos)
+ * For of - Retorna o valor em si (iteráveis, arrays ou strings)
+ */
+
 const pessoa = {
-    nome: 'Lais',
-    sobrenome: 'Karlis'
+    nome: 'Kaio',
+    sobrenome: 'Lincon'
 }
 
-for (let chave in pessoa){
-    console.log(chave, pessoa[chave]);
+for (let valor of pessoa) {
+    console.log(pessoa);
 }
-
-
-// for (let i = 0; i < nomes.length; i++) {
-//     console.log(nomes[i]);    
-// }
-
-// for (let i in nomes){
-//     console.log(nomes[i]);
-// }
-
-// for (let valor of nomes){
-//     console.log(valor);
-// }
-
-// console.log("\n======\n");
-
-// nomes.forEach(function(e){
-//     console.log(e);
-// })
-
